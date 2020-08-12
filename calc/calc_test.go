@@ -3,13 +3,21 @@ package calc
 import "testing"
 
 func TestSum(t *testing.T) {
-	patterns := []struct {
+	patterns := map[string]struct {
 		x        int
 		y        int
 		expected int
 	}{
-		{x: 1, y: 2, expected: 3},
-		{x: 2, y: 3, expected: 5},
+		"初歩的なテスト": {
+			x:        1,
+			y:        2,
+			expected: 3,
+		},
+		"初歩的なテストをもう一つ": {
+			x:        2,
+			y:        3,
+			expected: 5,
+		},
 	}
 
 	for index, p := range patterns {
